@@ -74,6 +74,17 @@ function passObj(anyObject){
 // })
 
 
+// Passing Array as an Argument
+
+const myArray = [1, 2, 3, 4]
+
+function passArray(anyArray){
+    return anyArray[1]
+}
+
+// console.log(passArray(myArray))
+// console.log(passArray([199, 324, 5354])) 
+
 
 
 
