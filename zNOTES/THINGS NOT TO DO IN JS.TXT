@@ -1,0 +1,13 @@
+## NOT TO DO THE FOLLOWING WHILE WRITING JAVASCRIPT :
+
+***1. var is a global scope variable. which do not follow modern scope architecture.
+
+***2. not preferable in the production code.
+// Implict Scoping in if statement
+
+if (true) console.log("true") // for single line 
+
+if (false) console.log("first line true"), // for multiply line statement use ,
+console.log("second line true"),
+console.log("third line true")
+console.log("third line false")

@@ -1,0 +1,90 @@
+####################################################################################################
+
+ # JAVASCRIPT EXECUTION CONTEXT = .JS FILE CREATED BY DEVELOPER HOW WILL IT EXECUTED.
+
+  whenever the file got executed by Javascript engine, the first thing to get build is :
+  1. Global Execution Context ====> refered to the 'this' variable
+  2. Browser, Node.js, Bun, Deno has different Global Execution Context.
+  3. Browser has "Window Object" as a value of  'this' 
+  4. Javascript is a single threaded.
+
+  ## Global Execution Context
+  ## Function Execution Context
+  ## Eval Execution Context
+
+
+ Javascript run file in 2 phases :
+ 1. Memory Creation Phase (Creation Phase, Memory Phase)
+ 2. Execution Phase
+
+        *** EXAMPLE ***
+
+        let val1 = 10;
+        let val2 = 5;
+        function addNum(num1, num2){
+            let total = num1 + num2
+            return
+        }
+        let result1 = addNum(val1, val2)
+        let result2 = addNum(10, 2)
+  
+  STEP 1 : Global Execution allocated in 'this' variable . 
+           ## STEP 1 IS A ONE TIME PROCESS. 
+  
+  STEP 2 : Memory Phase :
+          val1 = undefined
+          val2 = undefined
+          addNum = definition
+          result1 = undefined
+          result2 = undefined
+
+  STEP 3 : Execution Phase :
+        * val1 = 10
+        * val2 = 5
+        * result1 = addNum ==> {
+            // #### New Executional Context CREATED. ###
+            1. New Variable Environment.
+            2. Execution Thread.
+          }=======>{
+         SUB-STEP 1. Memory Phase
+                 val1 = undefined.
+                 val2 = undefined.
+                 total = undefined.
+
+         SUB-STEP  2. Execution Context
+                 num1 = 10
+                 num2 = 5 
+                 total = 15 // it will return to the Parent/Global Executional Context
+          }
+         SUB-STEP  3.   // #### New Executional Context DESTROYED. ###
+
+        * result2 = addNum {
+                // same process 
+                // return 12 
+        }  
+ 
+ STEP 4: EXIT .
+
+ #############################################################################################################       
+
+## STACK : LIFO = LAST IN FIRST OUT
+
+              3. function 2
+              2. function 1
+              1. Global Executional Context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
