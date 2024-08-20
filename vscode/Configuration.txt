@@ -3,6 +3,7 @@ MY CONFIGURATION = {
     OS : "WINDOWS 11",
     TEXT-EDITOR : "VS-CODE",
     TEXT-EDITOR VERSION : "1.85.2"
+    Node.js Version : "v21.6.2"
 }
 
 
