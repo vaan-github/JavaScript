@@ -1,0 +1,4 @@
+## VSCODE SHORTCUTS 
+
+1. Ctrl + D ==> for editing the duplicate text
+2. Alt + Shift + Down Arrow key ==> to duplicate the upper line in the next line.
