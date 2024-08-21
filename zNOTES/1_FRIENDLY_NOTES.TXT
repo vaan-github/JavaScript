@@ -73,6 +73,15 @@
               2. function 1
               1. Global Executional Context
 
+#######################################################################################################
+
+## IMP OBJECT TO ARRAY CONVERSION.
+
+Object.keys(anyObject)   : This will return an array of keys in the Object
+Object.values(anyObject)   : This will return an array of values in the Object
+
+
+######################################################################################################
 
 
 
