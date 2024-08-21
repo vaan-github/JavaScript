@@ -1,0 +1,5 @@
+######## SITE NAMES FOR DEVELOPMENT #####################
+
+1. json formatter => https://jsonformatter.org/
+2. Excali Draw => https://excalidraw.com/
+3. 

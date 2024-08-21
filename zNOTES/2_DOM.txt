@@ -1,0 +1,18 @@
+Creator of JS = Brendan Eich
+
+# CMD IN CONSOLE
+ 1. console.log(window)
+ 2. console.log(window.document) or console.log(document)
+ 3. console.dir(document) // document => Object 
+ 4. console.log(document.baseURI)
+ 5. console.log(document.links[2])  //### It is in HTMLCollection, NOT IN ARRAY. ###
+ 6. document.getElementById('firstHeading').innerHTML = "<h1>Aniket<h1/>"
+
+
+ ##################### DOM STRUCTURE ##############################
+
+LINK 1 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fmoyedx3%2F13-dom-and-layout-trees-3m9m&psig=AOvVaw13bcYEe-bjqQHLllC86xx0&ust=1724351581386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqsLbchogDFQAAAAAdAAAAABAZ
+
+LINK 2 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40reettikgoswami97%2Fdocument-object-model-dom-c19d66abd235&psig=AOvVaw13bcYEe-bjqQHLllC86xx0&ust=1724351581386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqsLbchogDFQAAAAAdAAAAABAh
+
+LINK 3 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fweg896.github.io%2Fjavascript%2F2017%2F04%2F24%2FDOM-Event-Capturing-And-Bubbling.html&psig=AOvVaw13bcYEe-bjqQHLllC86xx0&ust=1724351581386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqsLbchogDFQAAAAAdAAAAABAp
