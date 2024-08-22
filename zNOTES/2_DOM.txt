@@ -1,4 +1,15 @@
+###################################### CHROME CONSOLE #######################################################
+
+1. HTMLCollection
+2. NodeList
+
 Creator of JS = Brendan Eich
+
+################################ CONSOLE SHORTCUTS ##########################
+
+1. Shift + Enter => for new line.
+2. Enter => to execute cmd.
+
 
 # CMD IN CONSOLE
  1. console.log(window)
@@ -6,7 +17,7 @@ Creator of JS = Brendan Eich
  3. console.dir(document) // document => Object 
  4. console.log(document.baseURI)
  5. console.log(document.links[2])  //### It is in HTMLCollection, NOT IN ARRAY. ###
- 6. document.getElementById('firstHeading').innerHTML = "<h1>Aniket<h1/>"
+ 6. document.getElementsById('firstHeading').innerHTML = "<h1>Aniket<h1/>" // dom manupulation.
 
 
  ##################### DOM STRUCTURE ##############################
@@ -16,3 +27,64 @@ LINK 1 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fmoyedx3%2F13
 LINK 2 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40reettikgoswami97%2Fdocument-object-model-dom-c19d66abd235&psig=AOvVaw13bcYEe-bjqQHLllC86xx0&ust=1724351581386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqsLbchogDFQAAAAAdAAAAABAh
 
 LINK 3 : https://www.google.com/url?sa=i&url=https%3A%2F%2Fweg896.github.io%2Fjavascript%2F2017%2F04%2F24%2FDOM-Event-Capturing-And-Bubbling.html&psig=AOvVaw13bcYEe-bjqQHLllC86xx0&ust=1724351581386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiqsLbchogDFQAAAAAdAAAAABAp
+
+
+
+############################# DOM MANUPULATION ###########################
+FOLDER : 6_DOM , FILE :1.dom_part1.html
+
+## BASIC
+1. document.getElementsById('title') 
+2. document.getElementsById('title').class // Output : undefined
+3. document.getElementsById('title').className // Output : 'heading'  // react => jsx : className , it will shown as class but actually it is className behind the document. 
+4. document.getElementsById('title').id // Output : 'title' 
+5. document.getElementsById('title').getAttribute('class') // Output : 'heading'
+6. document.getElementsById('title').setAttribute('class','test-heading') // Output : undefined // but the attribute is overwrite in the browser element section.
+7. const title = document.getElementsById('title') // Output : undefined  //  save value in title variable
+8. title.style.backgroundColor = 'green'
+9. title.style.padding = '16px'
+10. title.style.borderRadius = '15px'
+11. title.textContent // Able to show all the text content unlike innerText
+12. title.innerHTML // able to show html inside text content
+13. title.innerText // Not able to show text content hide by (style = "display : none")
+
+## MEDIUM
+
+// querySelector is just like CSS Selector
+
+1. document.querySelector('h1')  // returns the h1 tag (only one)  // it is like a JQuery
+2. document.querySelector('#title') // returns id // you have to write the #value 
+3. document.querySelector('.heading') // returns class  // you have to write the .value
+4. document.querySelector("input[type='password']")
+5. document.querySelector('p:first-child')
+6. const myUL = document.querySelector('ul')
+7. const turnGreen = myUL.querySelector('li')
+8. turnGreen.backgroundColor = "green"
+9. turnGreen.innerText = "five"
+
+// querySelectorAll
+
+1. document.querySelectorAll('li')  // returns NodeList
+2. const tempLiList = document.querySelectorAll('li')
+3. tempLiList.style.color = 'green' // Error
+4. tempLiList[0].style.color = 'green' // first element turns green . // This is NodeList basic foundation.
+5. const myH1 = document.querySelectorAll('h1')
+6. myH1.style.color = "green" // error : same like 3. point.
+7. tempLiList.forEach((liTag)=> {
+       liTag.style.backgroundColor = "green"
+    } ) 
+
+// Conversion of HTMLCollection
+
+1. const tempClassList = document.getElementsByClassName('list-item')  // returns HTMLCollection , which dont have forEach.
+2. const myConvertedArray = Array.from(tempClassList) // Conversion of HTMLCollection to ARRAY .
+3. myConvertedArray.forEach((li)=>{
+             li.style.color = 'orange'
+      })
+
+
+
+
+
+
+
