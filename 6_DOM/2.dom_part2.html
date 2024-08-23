@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : Aniket</title>
+</head>
+<body style="background-color: #212121; color: #fff;", >
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent')
+//    console.log(parent)
+//    console.log(parent.children) // return HTMLCollection.
+//    console.log(parent.children[1]) 
+//    console.log(parent.children[1].innerHTML)
+    for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i].innerHTML)
+        
+    }
+    parent.children[1].style.color = "yellow"
+
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    const dayOne = parent.querySelector(".day")
+    // console.log(dayOne)
+    // console.log(dayOne.parentElement.innerText) // returns parent element // This is for code optimization. Since, running the query selector again is not a good approach.
+    // console.log(dayOne.nextElementSibling) // Mondays brother is tuesday
+    
+    // ## Node :
+    // Node only count 1 line break, any further will not be added in NodeList(numberOfNodes)
+    // comment in html is counted in a nodelist in node.
+    console.log(`Node : ${parent.childNodes}`); // Output : Node : [object NodeList] 
+    console.log("Node : ",parent.childNodes) // NodeList(9) [text, div.day,  // This is the difference.
+    
+    
+
+    
+
+    
+
+</script>
+</html>

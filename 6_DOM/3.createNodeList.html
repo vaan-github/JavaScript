@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodeList</title>
+</head>
+<body style="background-color: #212121; color: #fff;", >
+
+    
+</body>
+<script>
+
+    // creating DIV element inside memory.
+   const divElement = document.createElement('div')
+   console.log(divElement)
+   divElement.className = "main"
+   divElement.id = "myId"
+   divElement.setAttribute('title',"myTitle")
+   divElement.style.backgroundColor = "pink"
+   divElement.style.padding = "12px"
+//    divElement.innerText = "Aniket" 
+   const textNode = document.createTextNode('Aniket') // This is more optimize
+   divElement.appendChild(textNode)
+
+
+   // difference between setting with divElement.id And divElement.setAttribute('title',"myTitle").
+   // * setAttribute : 1. Directly set the value inside the node. // more optimize
+   // * .innerText : Overwrite the value . 1. select the value inside the node 2. Take the value and Overwrite it.
+
+   
+   
+   //  
+
+</script>
+</html>
