@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | MANUPULATION</title>
+</head>
+<body style="background:#212121; color: pink;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+     // #Insert
+
+    // Simple way 
+      addLanguage = (newLang)=> {
+        const li =  document.createElement("li") // step 1
+        li.innerText = newLang // step 2
+         document.querySelector(".language").appendChild(li) // step 3
+        // Below is the breakdown of the above line.
+        // const parent = document.querySelector(".language")
+        // console.log(parent.appendChild(li))
+
+      }
+      addLanguage("python")
+    
+    // Optimize way
+     optimizeAddLang = (newLang)=>{
+        const li = document.createElement('li') // step 1
+        li.appendChild(document.createTextNode(newLang)) // step 2 // the optimization. 
+        document.querySelector('.language').appendChild(li) // step 3
+     }
+     optimizeAddLang("typescript")
+
+     // #Edit
+
+     // Follow the chronological order
+     // This function is develop by me.
+     editListFunction = (edit, index) => {
+         const li = document.querySelectorAll('li') // Step 1 : query all the li 
+         const newLi = document.createElement('li') // Step 2 : create new li 
+          console.log(li[index].replaceWith(newLi)) // Step 3 : first replace li 
+          newLi.appendChild(document.createTextNode(edit))  // Step 4 : then insert value in li
+        }
+         editListFunction("java",1)
+
+     const li = document.querySelector('li:nth-child(1)')
+    //  li.innerHTML = "java"  // 1st way
+
+     const newLi = document.createElement('li')
+    //  li.replaceWith(newLi)
+    //  newLi.textContent = "java"  // 2nd way  // textContent is worse than innerHTML in terms of optimization .
+
+    const liOuterHtml = document.querySelector('li:first-child')  // 3rd way 
+    liOuterHtml.outerHTML = "<li>Golang</li>"
+
+
+    // #delete
+    const del = document.querySelector("li:last-child")
+    del.remove()
+
+
+
+
+     
+
+</script>
+</html>
