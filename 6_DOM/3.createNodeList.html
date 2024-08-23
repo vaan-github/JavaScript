@@ -1,3 +1,4 @@
+<!-- This is 3.dom_part3.html , I renamed it to highlight the topic -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,7 @@
    divElement.id = "myId"
    divElement.setAttribute('title',"myTitle")
    divElement.style.backgroundColor = "pink"
+   divElement.style.color = "black"
    divElement.style.padding = "12px"
 //    divElement.innerText = "Aniket" 
    const textNode = document.createTextNode('Aniket') // This is more optimize
@@ -30,7 +32,8 @@
 
    
    
-   //  
+   //  Appending div 
+   document.body.appendChild(divElement)
 
 </script>
 </html>
