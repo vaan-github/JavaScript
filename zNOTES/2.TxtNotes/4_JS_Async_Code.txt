@@ -1,0 +1,16 @@
+############## ASYNC CODES ###############
+
+1. JAVASCRIPT (default) => a. Synchronous
+                 b. Single-Threaded
+2. JAVASCRIPT (default) doesnt comes as a standalone engine,It comes as package in  a runtime environment like node.js, browser, etc
+3.  Execution Context : excute one line of a code at a time. (single threaded)
+
+4. Blocking code (Synchronous): Stop at the busStop for the bus to come.
+    # Reading a file : js(thread,#stopTheProgram,waitingForKernal_return) => kernel_OS(thread, runningOS,readingFile_returntoJS)
+
+5. Non-Blocking code (ASynchronous): Walk to the next stop where the bus,might come.
+    # Reading a file : js(thread,#runningTheProgram,waitingForKernal_return) => kernel_OS(thread, runningOS,readingFile_returntoJS)
+    
+6. DIAGRAM IS SHOWN IN 1.ImagesNotes/1.jsEngineDiagram.png
+    # Asked in my Interview in 10xtech.io
+    1.setTimeOut 
