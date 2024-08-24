@@ -1,0 +1,17 @@
+########## EVENTS #########
+
+1. Javascript runs events squenctially,with some exceptions.
+2. Javascript is synchronize language, but sometime it become asynchronous.
+3. Asynchronous Javascript = Browsers Events(mouse events ,etc).
+
+4. Interview Preparations for addEventListener
+     a. type : keyboardsTypeEvent, mouseTypeEvent
+     b. timestamp
+     c. preventDefault : to change the default behaviour of something. eg. form filling default behaviour (submit), can be change;
+     d. target
+     e. toElement
+     f. srcElement
+     g. currentTarget
+     h. clientX ,clientY
+     i. screenX, screenY, offset
+     j. altKey, ctrlKey, shiftKey, keyCode
