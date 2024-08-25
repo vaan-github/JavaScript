@@ -5,3 +5,4 @@
 3. Stackblitz =>  https://stackblitz.com/
 4. randomUser API => https://randomuser.me
 5. github Public API => https://api.github.com/users/vaan-github
+3. dummyApi => https://jsonplaceholder.typicode.com/users
