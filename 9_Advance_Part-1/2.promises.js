@@ -166,6 +166,7 @@ getAllUsers()
 
 // using .then .catch
 // fetch is a promise type object
+// fetch working is quite unique.
 fetch("https://api.github.com/users/vaan-github")
 .then((fetchResponse)=>{
     console.log('Fetch Completed')
@@ -178,3 +179,4 @@ fetch("https://api.github.com/users/vaan-github")
     // console.log(error)
     console.log("E: ",error)
 })
+

@@ -1,0 +1,8 @@
+// fetch api article
+## MUST READ ##
+
+link 1 : https://blog.logrocket.com/fetch-api-node-js
+
+link 2 : https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+
