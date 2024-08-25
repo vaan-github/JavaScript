@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB API functions</title>
+</head>
+<body class="body" style="background-color: #212121; color:#fff;">
+    <h1>Web Api : setTimeout()</h1>
+    <p> *handler : It is a function with no name.Or a reference from a function. e.g</p>
+    <p>setTimeout(hello,2000)  // as you can see we didnt execute the function using hello()</p>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setInterval, setTimeout, clearInterval, clearTimeout
+    
+    // directly using function
+    setTimeout(()=>{
+        console.log('After 2 second or 2000ms')
+    },2000)
+     
+     // Using function reference
+    hello = () => {
+        console.log('hello')
+    }
+
+    setTimeout(hello,4000) // setTimeout(handler, time in ms)
+
+    // manupulating dom
+    const addElementFun = function(){
+    const addElement = document.createElement('h1')
+    addElement.innerHTML = "mehnat"
+    const body = document.querySelector('.body')
+    body.appendChild(addElement)
+    }
+    // using stopTimeout
+    const noMehnat = setTimeout(addElementFun,3000) // setTimeout(handler, time in ms)
+    
+    stop = document.querySelector('#stop')
+    console.log(stop)
+    stop.addEventListener('click',(eventObject)=>{
+        clearTimeout(noMehnat)
+        console.log('no mehnat')
+    },false)
+
+</script>
+</html>

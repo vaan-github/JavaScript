@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB API functions</title>
+</head>
+<body class="body" style="background-color: #212121; color:#fff;">
+    <h1>Web Api : setInterval()</h1>
+    <!-- <p> *handler : It is a function with no name.Or a reference from a function. e.g</p> -->
+
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+ const hello = (str) =>{
+    console.log(str ,Date.now())
+ }
+   // Assignment 1: to start and stop the setInterval.
+    const start = document.querySelector('#start')
+    start.addEventListener('click', () =>{
+        // e.preventDefault()
+        const infiniteHello = setInterval(hello,2000,"hi")
+        
+    const stop = document.querySelector('#stop')
+     stop.addEventListener('click',()=>{
+        clearInterval(infiniteHello)
+     })
+    })
+
+
+// 
+// 
+
+</script>
+</html>
