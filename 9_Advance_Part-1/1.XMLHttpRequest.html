@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    <h1>XMLHttpRequest (XHR)</h1>
+    <p>XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.</p>
+    <h2>
+        EventTarget <-- XMLHttpRequestEventTarget <--- XMLHttpRequest
+    </h2>
+    <p> Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML.</p>
+    <h1>Instance Properties</h1>
+      <ul>
+        <li>XMLHttpRequest.readyState</li>
+        <!-- <img src="..\zNOTES\1.ImagesNotes\2.XMLHttpsRequest().png" alt="pic"> -->
+      </ul>
+</body>
+<script>
+  const requestURL = "https://api.github.com/users/vaan-github"
+  const xhr = new XMLHttpRequest();
+  
+  xhr.open('GET',requestURL)
+  
+
+  let imageLink = null
+  let userName  = null
+  xhr.onreadystatechange = function() {  // didn't get the same output in the arrow function.
+    console.log(typeof xhr.readyState);
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4){
+        const data = JSON.parse(this.responseText) //string to json.
+        console.log(typeof this.responseText);
+        imageLink = data.avatar_url
+        userName = data.name
+        console.log(data.login)
+
+    }
+  }
+
+   // #### ISSUE #####  // maybe it doesnt support arrow function.
+  // xhr.onreadystatechange = () => {  // didn't get the same output in the arrow function.
+  //   console.log(typeof xhr.readyState);
+  //   console.log(xhr.readyState);
+  //   if (xhr.readyState === 4){
+  //       console.log(typeof this.responseText);
+  //       console.log(this.responseText);
+  //   }
+  // }
+  console.log(xhr)
+  xhr.send();
+
+
+  // Assignment 2: take pic,name from the api and display it  by clicking button
+  
+  const div = document.createElement('div')
+  const h2 = document.createElement('h2')
+  const button = document.createElement('button')
+   
+  const myBody = document.querySelector('.body')
+   
+  
+  button.innerText = `CLICK ME TO SHOW ME`
+
+
+  button.addEventListener('click',function(){
+    div.innerHTML = `
+  <img src="${imageLink}" alt="aniket"/>
+          `
+
+  h2.innerHTML = `
+  <span> ${userName} </span
+
+         `
+         button.innerText = `CLICK ME TO REMOVE ME`
+         button.addEventListener('click',function(){
+            // div.remove()
+            // h2.remove()
+            location.reload(true) //jugaad
+         })
+  },false)
+  
+  myBody.appendChild(div)
+  myBody.appendChild(h2)
+  myBody.appendChild(button)
+
+</script>
+</html>

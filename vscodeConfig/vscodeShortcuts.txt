@@ -2,3 +2,4 @@
 
 1. Ctrl + D ==> for editing the duplicate text
 2. Alt + Shift + Down Arrow key ==> to duplicate the upper line in the next line.
+3. Alt + Arrow Up/Down ==> to move line up and down
