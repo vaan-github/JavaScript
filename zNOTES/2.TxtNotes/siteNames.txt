@@ -3,4 +3,5 @@
 1. json formatter => https://jsonformatter.org/
 2. Excali Draw => https://excalidraw.com/
 3. Stackblitz =>  https://stackblitz.com/
-
+4. randomUser API => https://randomuser.me
+5. github Public API => https://api.github.com/users/vaan-github
