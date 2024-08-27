@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIND</title>
+</head>
+<body style="background-color: #212121;">
+    <button>Click Me</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // requirement
+            document
+            .querySelector('button')
+            .addEventListener('click', this.buttonClicked.bind(this) ) // replaced bind with call ; function invoked 1 times ; then not invoked again even if we click the button.
+
+        }
+
+        buttonClicked(){
+            console.log("button Clicked")
+            // console.log(this);
+            console.log(`Server at ${this.server}`) // server kho gya hai 
+        }
+
+    }
+
+    const app = new React()
+
+    /*
+      1. Invocation:
+      call(): Immediately invokes the function.
+      
+      bind(): Returns a new function that can be invoked later.
+
+      2. Use Case:
+
+      call(): Useful when you need to invoke a function with a specific this context and arguments right away.
+      
+      bind(): Useful when you need to create a new function with a fixed this context and/or fixed initial arguments for later use.
+
+
+    */
+    
+</script>
+</html>
