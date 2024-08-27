@@ -48,6 +48,32 @@ const myHeroesObject = {
 }
 
 // now listen
+/*
+  see the image in this link :https://github.com/vaan-github/JavaScript/blob/main/zNOTES/1.ImagesNotes/5.EverthingIsObject.png?raw=true
+
+  1. everything is passing through an object .
+  2. So what if we inject the property inside an object.
+  3. since, it is the parent object .string,function, child object all have that property.
+*/
+
+// Injecting a property inside parent Object
+Object.prototype.aniket = function(){
+  console.log(`Aniket is everywhere`)
+}
+
+// it works
+// myHeroesArray.aniket() 
+// myHeroesObject.aniket()
+
+// Injecting inside parent Array
+Array.prototype.aniketArray = function(){
+  console.log(`Aniket is only available for array only.`)
+}
+
+// myHeroesObject.aniketArray() // this will throw error.
+myHeroesArray.aniketArray()
+
+
 
 
 
