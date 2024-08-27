@@ -71,9 +71,23 @@ Array.prototype.aniketArray = function(){
 }
 
 // myHeroesObject.aniketArray() // this will throw error.
-myHeroesArray.aniketArray()
+// myHeroesArray.aniketArray()
 
+// Solving the Previous Goal
 
+let anotherString = "    aniket"
+
+String.prototype.trueLength = function(){
+  // console.log(this) // give whole object
+  console.log(`${this}`) // get the value of element by id `${}`
+  // console.log(this.name) //obselete property
+  console.log(`True Length: ${this.trim().length}`)
+}
+
+console.log(anotherString.trueLength())
+"   varma".trueLength()
+// trim()  ==> Method
+// length  ==> Property
 
 
 
