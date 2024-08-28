@@ -12,6 +12,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Detailed list of topics covered in the repository (see previous section)
 
 ## 1_Basics_Part-1/
+
 - **1.1_Introduction_to_JS.js**
   - Basic syntax and introduction to JavaScript
 - **1.2_Variables.js**
@@ -22,6 +23,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Various operators and their usage in expressions
 
 ## 2_Basics_Part-2/
+
 - **2.1_Type_Conversion.js**
   - Code examples of implicit and explicit type conversion
 - **2.2_Functions.js**
@@ -32,6 +34,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Demonstrating try-catch blocks and custom error handling
 
 ## 3_Basics_Part-3/
+
 - **3.1_Objects.js**
   - Creating and manipulating objects
 - **3.2_Arrays.js**
@@ -40,6 +43,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Understanding prototypes and inheritance in JavaScript
 
 ## 4_Control_Flow/
+
 - **4.1_Conditional_Statements.js**
   - `if...else` and `switch` statements
 - **4.2_Loops.js**
@@ -48,6 +52,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Usage of `break`, `continue`, and `return` statements
 
 ## 5_Iterations/
+
 - **5.1_Array_Methods.js**
   - Advanced array methods such as `map`, `filter`, and `reduce`
 - **5.2_Iterators_and_Generators.js**
@@ -56,6 +61,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Working with Set and Map objects
 
 ## 6_DOM/
+
 - **6.1_DOM_Introduction.js**
   - Basics of DOM and how to interact with it
 - **6.2_DOM_Manipulation.js**
@@ -66,6 +72,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Handling forms and form validation in JavaScript
 
 ## 7_Projects/
+
 - **Calculator_App/**
   - `index.html`
   - `styles.css`
@@ -88,6 +95,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - `gallery.js`
 
 ## 8_Events/
+
 - **8.1_Event_Basics.js**
   - Basics of adding event listeners and handling events
 - **8.2_Common_Events.js**
@@ -98,6 +106,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Creating and using custom events in JavaScript
 
 ## 9_Advanced_Part-1/
+
 - **9.1_Asynchronous_JS.js**
   - Understanding asynchronous JavaScript and callbacks
 - **9.2_Promises.js**
@@ -110,6 +119,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Working with local and session storage
 
 ## 10_OOPS/
+
 - **10.1_ES6_Classes.js**
   - Introduction to classes and object-oriented programming in ES6
 - **10.2_Inheritance.js**
@@ -120,6 +130,7 @@ This document provides a comprehensive overview of the file structure in the Jav
   - Mixins, private members, and more advanced OOP topics
 
 ## 11_FunWithJS/
+
 - **11.1_Code_Snippets.js**
   - Interesting and useful JavaScript code snippets
 - **11.2_Challenges_and_Puzzles.js**
