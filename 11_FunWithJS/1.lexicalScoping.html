@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexicalScoping</title>
+</head>
+<body>
+    
+</body>
+
+
+<script>
+// 1. Lexical Scoping then 2. Closure
+
+//1. Lexical Scoping
+
+// child function can take/access property of parent function but the reverse is not true.
+
+function Parent(){
+    const forChild = "IceCream"
+    // console.log(forParent) // unable to access property of child function.
+
+    function Child1(){
+        const myMoney1 = "Money1"
+        console.log(`Child 1 ${forChild}`) // able to access property inner of the Outer() function.
+    }
+
+    function Child1(){
+        const myMoney1 = "Money1"
+        console.log(`Child Imposter ${forChild}`) // able to access property inner of the Outer() function.
+        console.log("OverWrited Imposter Child")
+    }
+
+    function Child2(){
+        const myMoney2 = "Money2"
+        console.log(`Child 2 ${forChild}`) // able to access property inner of the Outer() function.
+        // console.log(myMoney1) // unable to access Child1() Money/Property
+    }
+
+
+    Child1()
+    Child2()
+}
+
+Parent()
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #212121;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+
+// Inner Working Step Wise
+
+
+
+     // Define a function named makeFunc
+function makeFunc() {
+    // Inside makeFunc, declare a local variable 'name' and assign it the value "Mozilla"
+    const name = "Mozilla";
+
+    // Define another function named displayName within makeFunc
+    // This is an inner function or a nested function
+    function displayName() {
+        // The inner function 'displayName' has access to variables within its own scope
+        // and also the scope of its containing function 'makeFunc'
+        // Here, it uses the 'name' variable from the outer function's scope
+        console.log(name);
+    }
+
+    // The makeFunc function returns the inner function 'displayName' 
+    // without executing it. Instead, it returns a reference to the function.
+    return displayName;  // lexical scope is returned.
+}
+
+// Call makeFunc and store the returned function (which is 'displayName') in the variable 'myFunc'
+const myFunc = makeFunc();
+
+// Call the function stored in 'myFunc'
+// Even though makeFunc has finished executing, 'myFunc' still has access to the 'name' variable
+// This is because 'displayName' forms a closure over the 'name' variable
+myFunc(); // Outputs: "Mozilla"
+
+
+// Summary: A closure is formed when an inner function retains access to the variables in the scope of the outer function that has already finished execution. This allows the inner function to use and manipulate the outer function's variables even after the outer function has returned.
+
+</script>
+
+<script>
+
+    // ###################### REAL WORLD EXAMPLE ON LEXICAL SCOPING AND CLOSURE.
+
+    // Not following the dont repeat yourself principle
+    //   document.getElementById('orange').onclick = function(){
+    //  document.body.style.backgroundColor = `orange`
+    //   }
+      
+
+    //   document.getElementById('green').onclick = function(){
+    //  document.body.style.backgroundColor = `green`
+    //   }
+
+      // following the DRY principle.
+
+      function clickHandler(color){
+        return function(){
+            // even after returning this function it still has the closure of the color parameter because of lexical scoping.
+     document.body.style.backgroundColor = `${color}`
+      }
+      }
+    //   console.log(clickHandler())
+      document.getElementById('orange').onclick = clickHandler("orange")
+      document.getElementById('green').onclick = clickHandler("green")
+
+      // What if we dont return the function inside function.
+      clickHandler // will only give you function reference 
+      clickHandler () // execute the function.
+</script>
+
+</html>
