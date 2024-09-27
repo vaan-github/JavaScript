@@ -2,7 +2,8 @@ MY CONFIGURATION = {
     DEVICE : "ASUS TUF F15",
     OS : "WINDOWS 11",
     TEXT-EDITOR : "VS-CODE",
-    TEXT-EDITOR VERSION : "1.85.2"
+    TEXT-EDITOR VERSION : "1.85.2" // Now the bug of cursor disapperance is fixed. download the latest version.
+    
     Node.js Version : "v21.6.2"
 }
 
