@@ -1,8 +1,9 @@
 /*
-Prefer not to use var : Issue in block scope and functional scope
+Prefer not to use var : Issue with block scope, hoisting without temporal deadzone
 
- let for variable   // same as var but tackle the scope issue;
- const for constant
+ let for variable   // same as var but tackle the block scope issue, hoisting with temporal deadzone;
+ 
+const for constant
 
 */
 
